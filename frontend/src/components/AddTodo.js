@@ -15,7 +15,7 @@ export const AddTodo = () => {
         <input onChange={(event) => {setTodo(event.target.value)}}
                 className='input-add-todo'/>
         <div onClick={() => submitTodo()}
-                className="material-symbols-rounded">
+                className="material-symbols-rounded add-button">
         add
         </div>
     </div>

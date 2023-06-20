@@ -1,4 +1,4 @@
-/* import './AddTodo.css' */
+import '../style/Summary.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { removeAllTodos } from '../state-management/TodoSlice'
 
@@ -16,10 +16,10 @@ export const Summary = () => {
                              : `You Don't have tasks. Please add some`
         }
       </div>
-      <div className='delete-all'
+      {todoList?.length > 0 && <div className='delete-all'
            onClick={() => {removeTodos()}}>
         Clear all
-      </div>
+      </div>}
     </div>
   );
 }

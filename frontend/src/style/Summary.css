@@ -1,0 +1,20 @@
+.summary-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  align-items: center;
+}
+
+.delete-all {
+    background-color: rgb(228, 69, 69);
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+
+  &:hover {
+    background-color: rgb(181, 67, 67);
+  }
+}

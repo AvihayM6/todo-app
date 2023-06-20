@@ -1,4 +1,12 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from 'axios'
+
+export const fetchTodos = createAsyncThunk('todos/fetchTodos', async () => {
+  const response = await axios.get('http://localhost:8000/todos')
+  console.log('aasdsadasd', response)
+  return response.data;
+})
+
 
 const todoSlice = createSlice({
     name: 'addTodo',
@@ -15,6 +23,12 @@ const todoSlice = createSlice({
       removeAllTodos: (state) => {
         state.splice(0,state.length)
       },
+    },
+    extraReducers: (builder) => {
+      builder.addCase(fetchTodos.fulfilled, (state, action) => {
+        console.log(state)
+        return action.payload;
+      });
     },
 })
 

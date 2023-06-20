@@ -8,9 +8,9 @@ import {Provider} from 'react-redux'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
-    <div class="ocean">
-      <div class="wave"></div>
-      <div class="wave"></div>
+    <div className="ocean">
+      <div className="wave"></div>
+      <div className="wave"></div>
     </div>
     <App />
   </Provider>

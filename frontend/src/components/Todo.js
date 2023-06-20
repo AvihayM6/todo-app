@@ -11,7 +11,7 @@ export const Todo = ({todoItem}) => {
     <div className="todo-container"
          title={todoItem}>
       <div className='todo-text'> {todoItem} </div>
-      <span class="material-symbols-outlined delete-todo"
+      <span className="material-symbols-outlined delete-todo"
             onClick={() => remove()}>
         delete
       </span>
