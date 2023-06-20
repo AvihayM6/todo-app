@@ -1,0 +1,13 @@
+/* display: flex;
+justify-content: space-between;
+margin: 10px 0; */
+
+.add-todo-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.input-add-todo {
+    width: 90%;
+}

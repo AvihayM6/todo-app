@@ -1,0 +1,10 @@
+.App {
+  box-shadow: -1px 1px 121px -6px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -1px 1px 121px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 1px 121px -6px rgba(0,0,0,0.75);
+  margin-top: 50px;
+  padding: 20px 50px 50px 50px;
+  border-radius: 30px;
+  z-index: 99;
+  width: 20%;
+}
