@@ -4,7 +4,7 @@ import { removeAllTodos } from '../state-management/TodoSlice'
 
 export const Summary = () => {
   const dispatch = useDispatch()
-  const todoList = useSelector((state) => state.todos)
+  const todoList = useSelector((state) => state.todos.todos)
 
   const removeTodos = () => {
     dispatch(removeAllTodos())

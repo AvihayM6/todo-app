@@ -1,6 +1,10 @@
 .todo-container {
   display: flex;
   justify-content: space-between;
+  background-color: #a5a4a487;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px 0;
 }
 
 .todo-container > div {
@@ -19,6 +23,6 @@
 }
 
 div:hover > .delete-todo {
-  width: 8%;
+  width: 7%;
   cursor: pointer;
 }

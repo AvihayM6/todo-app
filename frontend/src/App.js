@@ -7,12 +7,14 @@ import {AddTodo} from './components/AddTodo'
 import { useEffect } from 'react'
 
 function App() {
-  const todoList = useSelector((state) => state.todos)
+  const todoList = useSelector((state) => state.todos.todos)
+  const todoAdded = useSelector((state) => state.todos.todoAdded)
   const dispatch = useDispatch()
 
   useEffect(() => {
+    if(todoAdded) dispatch(fetchTodos())
     dispatch(fetchTodos())
-  }, [dispatch])
+  }, [dispatch, todoAdded])
   
   return (
     <div className="App">
