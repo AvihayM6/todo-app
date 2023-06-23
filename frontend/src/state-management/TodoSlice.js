@@ -54,17 +54,15 @@ const todoSlice = createSlice({
         state.todoAdded = false
       })
       builder.addCase(addSingleTodo.fulfilled, (state, action) => {
-        state.todos.push(action.payload)
         state.todoAdded = true
       })
       builder.addCase(removeSingleTodo.fulfilled, (state, action) => {
-        state.todos = state.todos.filter(todo => todo._id !== action.payload)
         state.todoAdded = true
       })
       builder.addCase(removeAllTodos.fulfilled, (state, action) => {
-        state.todos = state.todos.splice(0,state.todos.length)
         state.todoAdded = true
       })
+      /* Need to add for each case pending, fulfilled, rejected cases */
     },
 })
 
