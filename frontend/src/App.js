@@ -12,7 +12,6 @@ function App() {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    if(todoAdded) dispatch(fetchTodos())
     dispatch(fetchTodos())
   }, [dispatch, todoAdded])
   
