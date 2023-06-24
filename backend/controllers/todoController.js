@@ -27,8 +27,6 @@ const createTodo = async (req,res) => {
 //delete one todo from the list
 const deleteTodo = async (req,res) => {
   const id = req.body._id
-  console.log('req', req.body)
-  console.log('id', id)
   if(!mongoose.Types.ObjectId.isValid(id)) {
     return res.status(404).send(`The id: ${id} was not found`)
   }

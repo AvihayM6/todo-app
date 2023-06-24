@@ -3,7 +3,6 @@ import axios from 'axios'
 
 export const fetchTodos = createAsyncThunk('todos/fetchTodos', async () => {
   const response = await axios.get('http://localhost:8000/todos')
-  console.log('fetchTodos response', response)
   return response.data
 })
 
@@ -23,22 +22,6 @@ export const removeAllTodos = createAsyncThunk('todos/removeAllTodos', async () 
   const response = await axios.delete(`http://localhost:8000/todos`)
   return response.data
 })
-
-
-/* export const editProduct = createAsyncThunk(
-  'products/editProduct',
-  async (productObj: { id: string, fireProduct: FireProduct }, thunkAPI: any) => {
-
-    var updates: { [key: string]: FireProduct } = {};
-    updates['/allProducts/' + productObj.id] = productObj.fireProduct;
-
-    database.ref().update(updates, (error) => {
-      if (error) {
-        // The write failed...
-        console.log("editProduct error", error);
-        return thunkAPI.rejectWithValue(error);
-      } else { */
-
 
 const todoSlice = createSlice({
     name: 'todo',
